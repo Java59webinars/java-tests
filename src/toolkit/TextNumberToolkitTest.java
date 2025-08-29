@@ -7,11 +7,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TextNumberToolkitTest {
-
+    String str1; //Мы определяем переменные чтобы использовать их в before each
+    String str2;
     @BeforeEach
     void setUp() {
-//        String str1= "Listen";
-//        String str2="Silent";
+        str1= "Listen";
+        str2="Silent";
     }
 
     @AfterEach
@@ -20,7 +21,7 @@ class TextNumberToolkitTest {
 
     @Test
     void isAnagramLettersOnly_basic_true() {
-        assertTrue(TextNumberToolkit.isAnagramLettersOnly("Listen","Silent"));
+        assertTrue(TextNumberToolkit.isAnagramLettersOnly(str1,str2));
     }
 
     @Test
